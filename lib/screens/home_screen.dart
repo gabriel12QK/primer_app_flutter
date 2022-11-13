@@ -44,11 +44,9 @@ class HomeScreen extends StatelessWidget {
           itemBuilder: (context, index) => ListTile(
               leading: Icon(
                 menu[index].icon,
-                color: AppTheme.primary,
               ),
               title: Text(
                 menu[index].name,
-                style: const TextStyle(color: AppTheme.secondary),
               ),
               onTap: () {
                 // final route = MaterialPageRoute(

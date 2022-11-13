@@ -23,11 +23,19 @@ class AppTheme with ChangeNotifier {
       color: primary,
       elevation: 0,
     ),
+    listTileTheme: const ListTileThemeData(
+      textColor: secondary,
+      iconColor: primary
+    )
   );
   static final ThemeData theme_dark = ThemeData.dark().copyWith(
     appBarTheme: const AppBarTheme(
-      color: primary,
+      color :Colors.green,
       elevation: 0,
     ),
+    listTileTheme: const ListTileThemeData(
+      textColor: Colors.green,
+      iconColor: Colors.green,
+    )
   );
 }
