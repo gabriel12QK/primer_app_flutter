@@ -42,7 +42,11 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
       )),
       floatingActionButton: FloatingActionButton(
         onPressed: () => ChangeShape(),
-        child: const Icon(Icons.play_circle_fill_outlined, size: 40),
+        child: const Icon(
+          Icons.play_circle_outline_outlined,
+          size: 40,
+          color: Colors.white,
+        ),
       ),
     );
   }

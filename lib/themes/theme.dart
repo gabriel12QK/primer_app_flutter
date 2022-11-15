@@ -43,13 +43,14 @@ class AppTheme with ChangeNotifier {
       ),
       dialogTheme: DialogTheme(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-      ));
+      ),
+      floatingActionButtonTheme:
+          FloatingActionButtonThemeData(backgroundColor: primary));
 
   static final ThemeData theme_dark = ThemeData.dark().copyWith(
       appBarTheme: const AppBarTheme(
         color: secondary,
         elevation: 0,
-        
       ),
       listTileTheme: const ListTileThemeData(
         textColor: secondary,
@@ -75,5 +76,6 @@ class AppTheme with ChangeNotifier {
       dialogTheme: DialogTheme(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
-      );
+      floatingActionButtonTheme:
+          FloatingActionButtonThemeData(backgroundColor: secondary),);
 }
