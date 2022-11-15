@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:listview/main.dart';
 import 'package:listview/models/menu_options.dart';
+import 'package:listview/screens/animated_screen.dart';
+import 'package:listview/screens/avatar_screen.dart';
 import 'package:listview/screens/screens.dart';
 
 class AppRoutes {
@@ -22,11 +24,21 @@ class AppRoutes {
         name: 'Cards',
         screen: CardScreen(),
         icon: Icons.credit_card),
-        MenuOption(
+    MenuOption(
         route: 'Home',
         name: 'Home',
         screen: HomeScreen(),
-        icon: Icons.credit_card)
+        icon: Icons.credit_card),
+    MenuOption(
+        route: 'Avatar',
+        name: 'Avatar',
+        screen: AvartarScreen(),
+        icon: Icons.face),
+    MenuOption(
+        route: 'Animated',
+        name: 'Animated',
+        screen: AnimatedScreen(),
+        icon: Icons.play_circle_outline_outlined)
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

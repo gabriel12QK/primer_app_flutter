@@ -11,33 +11,29 @@ class HomeScreen extends StatelessWidget {
     final theme = Provider.of<AppTheme>(context);
     // bool i = true;
 
-
-
     final menu = AppRoutes.menuOptions;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Componentes Flutter"),
+        title: const Text("Home"),
         actions: [
           Row(
             children: [
               IconButton(
                 onPressed: () => theme.setTheme(AppTheme.theme_light),
-               
                 icon: const Icon(
                   Icons.sunny,
                   color: Colors.white,
                 ),
               ),
-            IconButton(
-            onPressed: () => theme.setTheme(AppTheme.theme_dark),
-            icon: const Icon(
-              Icons.nightlight_round_outlined,
-              color: Colors.white,
-            ),
-          )
+              IconButton(
+                onPressed: () => theme.setTheme(AppTheme.theme_dark),
+                icon: const Icon(
+                  Icons.nightlight_round_outlined,
+                  color: Colors.white,
+                ),
+              )
             ],
           )
-          
         ],
       ),
       body: ListView.separated(
