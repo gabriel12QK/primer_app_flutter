@@ -38,7 +38,12 @@ class AppRoutes {
         route: 'Animated',
         name: 'Animated',
         screen: AnimatedScreen(),
-        icon: Icons.play_circle_outline_outlined)
+        icon: Icons.play_circle_outline_outlined),
+        MenuOption(
+        route: 'Forms',
+        name: 'Forms',
+        screen: InputsScreen(),
+        icon: Icons.text_format_sharp)
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
