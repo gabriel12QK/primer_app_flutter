@@ -10,7 +10,8 @@ class InputsScreen extends StatelessWidget {
     final Map<String, String> formValues = {
       'Nombre': 'gabriel',
       'correo': 'gabriel@gmail.com',
-      'contraseña': '12345678'
+      'contraseña': '12345678',
+      'role': 'Admin'
     };
 
     return Scaffold(
@@ -54,6 +55,30 @@ class InputsScreen extends StatelessWidget {
                   isPassword: true,
                   formProperty: 'contraseña',
                   formValues: formValues,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                DropdownButtonFormField<dynamic>(
+                  value: 'Admin',
+                  items: const [
+                    DropdownMenuItem(
+                      value: 'Admin',
+                      child: Text('Admin'),
+                    ),
+                    DropdownMenuItem(
+                      value: 'Usuario',
+                      child: Text('Usuario'),
+                    ),
+                    DropdownMenuItem(
+                      value: 'Developer',
+                      child: Text('Developer'),
+                    ),
+                  ],
+                  onChanged: (value) {
+                    print(value);
+                    formValues['role'] = value ?? 'Admin';
+                  },
                 ),
                 SizedBox(
                   height: 30,
