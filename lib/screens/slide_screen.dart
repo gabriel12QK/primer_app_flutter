@@ -45,7 +45,7 @@ class _slideScreenState extends State<slideScreen> {
               title: Text('Habilitar slider'),
               value: _isValid,
               onChanged: ((value) => setState(() {
-                    _isValid = value ?? true;
+                    _isValid = value ;
                   }))),
           Expanded(
             child: SingleChildScrollView(
